@@ -15,15 +15,15 @@ The workflow began with an exploration of the dataset:
 
   * Boxplots of charges by region
 
-    ![Distribution of Charges by Region](https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Distribution%20of%20Hospital%20Charges%20by%20Region.png)
+    <img src="https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Distribution%20of%20Hospital%20Charges%20by%20Region.png" width="100" height="100" />
 
   * Correlation Heatmap & Pairplot to detect relationships between variables
-
-    ![Correlation Heatmap of key variables](https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Correlation%20Heatmap.png)![Pairplot of key variables](https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Pairplot%20of%20variables.png)
+    <img src="https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Correlation%20Heatmap.png" width="100" height="100" />
+    <img src="https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Pairplot%20of%20variables.png" width="100" height="100" />
 
   * Distribution of charges and log-charges
-
-    ![Distribution of hospital charges](https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Distribution%20of%20Hospital%20Charges.png) ![Distribution of log-transformed hospital charges](https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Distribution%20of%20Log%20Charges.png)
+    <img src="https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Distribution%20of%20Hospital%20Charges.png" width="100" height="100" />
+    <img src="https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Distribution%20of%20Log%20Charges.png" width="100" height="100" />
 
 * **Investigated potential interactions** between variables that could explain nonlinear patterns or curvature in residuals. 
 
@@ -33,7 +33,7 @@ These steps helped uncover strong nonlinear trends, substantial heteroskedastici
 
 The first step for this analysis was an exploration of linear regression and several GLM formulations (Gamma, log-link, Tweedie). Despite model-tuning, diagnostic plots revealed persistent heteroskedasticity and a curved residual pattern. 
 
-![GLM Residual Distribution](https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/GLM%20Residual%20Distribution.png)
+<img src="https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/GLM%20Residual%20Distribution.png" width="100" height="100" />
 
 Even after adding interaction terms, the GLMs were unable to capture the nonlinear structure of the data. This indicated that linear-based models were not the best fit for this prediction task, as they didn't scale as fast as the hospital charges did.
 
@@ -64,7 +64,7 @@ The final step was testing XGBoost as a more powerful ensemble model capable of 
 
 XGBoost achieved the **lowest mean absolute error** and the **highest R² score** on the test set among all models. Note that using a log-transformed target variable did not improve performance of this model.
 
-![Predicted vs. Actual Charges](https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Predicted%20vs%20Actual%20Charges.png)
+<img src="https://github.com/patriciaavram/Health-Insurance-Feature-Importance/blob/main/plots/Predicted%20vs%20Actual%20Charges.png" width="100" height="100" />
 
 This indicates that the model captures the structure of hospital charges more effectively than both decision trees and Random Forests.
 
